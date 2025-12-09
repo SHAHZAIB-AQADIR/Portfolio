@@ -48,7 +48,7 @@ const Footer: React.FC = () => {
           {[
             {
               icon: <FaFacebook />,
-              link: "https://www.facebook.com/tarun.kaushik.3511041/",
+              link: "https://www.facebook.com/profile.php?id=61577709962163",
             },
             {
               icon: <FaLinkedin />,
