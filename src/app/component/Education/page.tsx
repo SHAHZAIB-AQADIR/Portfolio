@@ -34,8 +34,8 @@ const education: EducationItem[] = [
   {
     id: 3,
     degree: "Matriculation",
-    school: "Beaconhouse School System",
-    img: "/beconhouse.png",
+    school: "The Smart School",
+    img: "/school.jpg",
   },
 ];
 
