@@ -21,7 +21,7 @@ interface WebDevelopmentCourse {
 const education: EducationItem[] = [
   {
     id: 1,
-    degree: "Bachelor of Science in Computer Science (BSCS) ",
+    degree: "Bachelor of Science in Computer Science (BSCS)",
     school: "Muhammad Ali Jinnah University (MAJU)",
     img: "/MAJU.png",
   },
@@ -59,57 +59,55 @@ const Education: React.FC = () => {
   return (
     <section
       id="education"
-      className="py-24 px-[12vw] md:px-[7vw] lg:px-[16vw] font-sans bg-skills-gradient clip-path-custom-3"
+      className="py-24 px-[5vw] md:px-[7vw] lg:px-[16vw] font-sans bg-skills-gradient overflow-hidden"
     >
       {/* ==================== EDUCATION SECTION ==================== */}
       <div className="text-center mb-16">
-        <h2 className="text-4xl font-bold text-white">EDUCATION</h2>
-        <div className="w-32 h-1 bg-purple-500 mx-auto mt-4"></div>
-        <p className="text-gray-400 mt-4 text-lg font-semibold">
-          My education has been a journey of learning and development. Here are
-          the details of my academic background.
+        <h2 className="text-4xl font-bold text-white tracking-widest uppercase">Education</h2>
+        <div className="w-32 h-1 bg-purple-500 mx-auto mt-4 rounded-full"></div>
+        <p className="text-gray-400 mt-6 text-lg font-medium max-w-2xl mx-auto">
+          My education has been a journey of learning and development. Here are the details of my academic background.
         </p>
       </div>
 
       {/* Education Timeline */}
-      <div className="relative mb-24">
-        <div className="absolute sm:left-1/2 left-0 transform -translate-x-1/2 sm:-translate-x-0 w-1 bg-white h-full"></div>
+      <div className="relative max-w-6xl mx-auto mb-32">
+        {/* Central Vertical Line */}
+        <div className="absolute left-4 sm:left-1/2 transform sm:-translate-x-1/2 w-[2px] bg-gradient-to-b from-purple-600 via-white/20 to-purple-600 h-full"></div>
 
         {education.map((edu, index) => (
           <div
             key={edu.id}
-            className={`flex flex-col sm:flex-row items-center mb-16 ${
-              index % 2 === 0 ? "sm:justify-start" : "sm:justify-end"
+            className={`relative flex flex-col sm:flex-row items-center mb-20 ${
+              index % 2 === 0 ? "sm:flex-row-reverse" : ""
             }`}
           >
-            {/* Timeline Circle */}
-            <div className="absolute sm:left-1/2 left-0 transform -translate-x-1/2 bg-gray-400 border-4 border-[#8245ec] w-12 h-12 sm:w-16 sm:h-16 rounded-full flex justify-center items-center z-10">
-              <img
-                src={edu.img}
-                alt={edu.school}
-                className="w-full h-full object-cover rounded-full"
-              />
+            {/* Timeline Indicator Dot */}
+            <div className="absolute left-4 sm:left-1/2 transform -translate-x-1/2 bg-gray-900 border-2 border-purple-500 w-8 h-8 rounded-full flex justify-center items-center z-20 shadow-[0_0_15px_rgba(130,69,236,0.6)]">
+              <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
             </div>
 
-            {/* Card */}
-            <div
-              className={`w-full sm:max-w-md p-4 sm:p-8 rounded-2xl border border-white bg-gray-900 backdrop-blur-md shadow-[0_0_20px_1px_rgba(130,69,236,0.3)] ${
-                index % 2 === 0 ? "sm:ml-0" : "sm:mr-0"
-              } sm:ml-44 sm:mr-44 ml-8 transform transition-transform duration-300 hover:scale-105`}
-            >
-              <div className="flex items-center space-x-6">
-                <div className="w-24 h-16 bg-white rounded-md overflow-hidden">
-                  <img
-                    src={edu.img}
-                    alt={edu.school}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="flex flex-col justify-between">
-                  <h3 className="text-xl font-semibold text-white">
-                    {edu.degree}
-                  </h3>
-                  <h4 className="text-md text-gray-300">{edu.school}</h4>
+            {/* Content Card */}
+            <div className={`w-full sm:w-[45%] ml-12 sm:ml-0 group`}>
+              <div className="p-6 rounded-2xl border border-white/10 bg-gray-900/40 backdrop-blur-xl shadow-2xl hover:border-purple-500/50 transition-all duration-500 hover:-translate-y-2">
+                <div className="flex flex-col md:flex-row items-center gap-6">
+                  {/* Logo Container */}
+                  <div className="flex-shrink-0 w-20 h-20 bg-white p-2 rounded-xl shadow-lg flex items-center justify-center">
+                    <img
+                      src={edu.img}
+                      alt={edu.school}
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
+                  
+                  <div className="text-center md:text-left">
+                    <h3 className="text-xl font-bold text-white group-hover:text-purple-400 transition-colors duration-300 leading-tight">
+                      {edu.degree}
+                    </h3>
+                    <h4 className="text-sm text-gray-400 mt-2 uppercase tracking-wide font-semibold">
+                      {edu.school}
+                    </h4>
+                  </div>
                 </div>
               </div>
             </div>
@@ -119,57 +117,42 @@ const Education: React.FC = () => {
 
       {/* ==================== COURSES SECTION ==================== */}
       <div className="text-center mb-16">
-        <h2 className="text-4xl font-bold text-white">
-          COURSES & CERTIFICATIONS
-        </h2>
-        <div className="w-32 h-1 bg-purple-500 mx-auto mt-4"></div>
-        <p className="text-gray-400 mt-4 text-lg font-semibold">
-          Alongside my education, I have also pursued professional web
-          development courses to enhance my skills.
-        </p>
+        <h2 className="text-4xl font-bold text-white tracking-widest uppercase">Courses & Certifications</h2>
+        <div className="w-32 h-1 bg-purple-500 mx-auto mt-4 rounded-full"></div>
       </div>
 
-      {/* Course Timeline */}
-      <div className="relative">
-        <div className="absolute sm:left-1/2 left-0 transform -translate-x-1/2 sm:-translate-x-0 w-1 bg-white h-full"></div>
+      <div className="relative max-w-6xl mx-auto">
+        <div className="absolute left-4 sm:left-1/2 transform sm:-translate-x-1/2 w-[2px] bg-gradient-to-b from-purple-600 via-white/20 to-purple-600 h-full"></div>
 
         {courses.map((course, index) => (
           <div
             key={course.id}
-            className={`flex flex-col sm:flex-row items-center mb-16 ${
-              index % 2 === 0 ? "sm:justify-start" : "sm:justify-end"
+            className={`relative flex flex-col sm:flex-row items-center mb-20 ${
+              index % 2 === 0 ? "sm:flex-row-reverse" : ""
             }`}
           >
-            {/* Timeline Circle */}
-            <div className="absolute sm:left-1/2 left-0 transform -translate-x-1/2 bg-gray-400 border-4 border-[#8245ec] w-12 h-12 sm:w-16 sm:h-16 rounded-full flex justify-center items-center z-10">
-              <img
-                src={course.img}
-                alt={course.institute}
-                className="w-full h-full object-cover rounded-full"
-              />
+            <div className="absolute left-4 sm:left-1/2 transform -translate-x-1/2 bg-gray-900 border-2 border-purple-500 w-8 h-8 rounded-full flex justify-center items-center z-20 shadow-[0_0_15px_rgba(130,69,236,0.6)]">
+              <div className="w-2 h-2 bg-white rounded-full animate-pulse"></div>
             </div>
 
-            {/* Card */}
-            <div
-              className={`w-full sm:max-w-md p-4 sm:p-8 rounded-2xl border border-white bg-gray-900 backdrop-blur-md shadow-[0_0_20px_1px_rgba(130,69,236,0.3)] ${
-                index % 2 === 0 ? "sm:ml-0" : "sm:mr-0"
-              } sm:ml-44 sm:mr-44 ml-8 transform transition-transform duration-300 hover:scale-105`}
-            >
-              <div className="flex items-center space-x-6">
-                <div className="w-24 h-16 bg-white rounded-md overflow-hidden">
-                  <img
-                    src={course.img}
-                    alt={course.institute}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="flex flex-col justify-between">
-                  <h3 className="text-xl font-semibold text-white">
-                    {course.degree}
-                  </h3>
-                  <h4 className="text-md text-gray-300">
-                    {course.institute}
-                  </h4>
+            <div className={`w-full sm:w-[45%] ml-12 sm:ml-0 group`}>
+              <div className="p-6 rounded-2xl border border-white/10 bg-gray-900/40 backdrop-blur-xl shadow-2xl hover:border-purple-500/50 transition-all duration-500 hover:-translate-y-2">
+                <div className="flex flex-col md:flex-row items-center gap-6">
+                  <div className="flex-shrink-0 w-20 h-20 bg-white p-2 rounded-xl shadow-lg flex items-center justify-center">
+                    <img
+                      src={course.img}
+                      alt={course.institute}
+                      className="w-full h-full object-contain"
+                    />
+                  </div>
+                  <div className="text-center md:text-left">
+                    <h3 className="text-xl font-bold text-white group-hover:text-purple-400 transition-colors duration-300 leading-tight">
+                      {course.degree}
+                    </h3>
+                    <h4 className="text-sm text-gray-400 mt-2 uppercase tracking-wide font-semibold">
+                      {course.institute}
+                    </h4>
+                  </div>
                 </div>
               </div>
             </div>

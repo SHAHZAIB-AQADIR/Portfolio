@@ -43,9 +43,9 @@ const Work: React.FC = () => {
       description:
         "A modern restaurant website featuring an online menu, category-based browsing, product details, and a cart-based ordering system. Fully responsive and built with Next.j.",
       image: "/restaurant.png", // add image in /public folder
-      github: "https://github.com/SHAHZAIB-AQADIR/Restaurant.git",
-      webapp: "https://restaurant-zeta-dun.vercel.app/",
-      tags: ["Next.js", "TailwindCss", "TypeScript"],
+      github: "https://github.com/SHAHZAIB-AQADIR/MASSIMO_Restaurant",
+      webapp: "https://massimo-restaurant-bdec.vercel.app/",
+      tags: ["Next.js", "TailwindCss", "TypeScript" , "Clerk Authentication" , "MongoDB Atlas"],
     },
   ];
 

@@ -76,23 +76,25 @@ const About = () => {
         </div>
 
         {/* Right Side */}
-        <div className="md:w-1/2 flex justify-center md:justify-end">
-          <ReactParallaxTilt
-            className="w-48 h-48 sm:h-64 md:w-[38rem] md:h-[38rem] border-4 border-purple-700 rounded-full"
-            tiltMaxAngleX={20}
-            tiltMaxAngleY={20}
-            perspective={1000}
-            scale={1.05}
-            transitionSpeed={1000}
-            gyroscope={true}
-          >
-            <img
-              src={Profile.src}
-              alt="Shahzaib A.Qadir"
-              className="w-full h-full rounded-full object-cover drop-shadow-[0_10px_20px_rgba(130,69,236,0.5)]"
-            />
-          </ReactParallaxTilt>
-        </div>
+       <div className="md:w-1/2 flex justify-center md:justify-end">
+  <ReactParallaxTilt
+    // {/* Size ko 38rem se kam karke 24rem (md) aur 20rem (sm) kiya hai */}
+    className="w-48 h-48 sm:w-64 sm:h-64 md:w-80 md:h-80 lg:w-[24rem] lg:h-[24rem] border-4 border-purple-700 rounded-full overflow-hidden"
+    tiltMaxAngleX={20}
+    tiltMaxAngleY={20}
+    perspective={1000}
+    scale={1.05}
+    transitionSpeed={1000}
+    gyroscope={true}
+  >
+    <img
+      src={Profile.src}
+      alt="Shahzaib A.Qadir"
+      // {/* object-top use kiya hai taake face sahi se visible ho agar crop ho rahi ho */}
+      className="w-full h-full rounded-full object-cover object-top drop-shadow-[0_10px_20px_rgba(130,69,236,0.5)]"
+    />
+  </ReactParallaxTilt>
+</div>
       </div>
     </section>
   );
