@@ -19,7 +19,7 @@ const Work: React.FC = () => {
   const projects: Project[] = [
     {
       id: 1,
-      title: "Hackathon 02",
+      title: "Rent A Car" ,
       description:
         "An interactive web app built for the Hackathon challenge with modern UI/UX design and responsive layout.",
       image: "/rentalcar.png", // add image in /public folder
@@ -47,6 +47,27 @@ const Work: React.FC = () => {
       webapp: "https://massimo-restaurant-bdec.vercel.app/",
       tags: ["Next.js", "TailwindCss", "TypeScript" , "Clerk Authentication" , "MongoDB Atlas"],
     },
+    {
+      id: 4,
+      title: "Elite Arena",
+      description:
+        "Book Your Gaming Slot in Seconds! The easiest way to reserve your favorite indoor games. Select your sport, pick a time, and lock in your slot instantly.",
+      image: "/elitearena.jpg", // add image in /public folder
+      github: "https://github.com/SHAHZAIB-AQADIR/Elite-Arena",
+      webapp: "https://elite-arena-one.vercel.app/",
+      tags: ["Next.js", "CSS", "JavaScript", "Firebase", "Clerk Authentication"],
+    },
+    {
+      id: 5,
+      title: "Gaming Zone",
+      description:
+        "Red Zone Gaming is a modern game booking web application that lets users seamlessly explore popular titles like Valorant, Forza, and GTA-V, choose available time slots, and reserve gaming sessions online with zero hassle.",
+      image: "/gamingzone.jpeg", // add image in /public folder
+      github: "https://github.com/SHAHZAIB-AQADIR/Gaming_Zone_Website",
+      webapp: "https://gaming-zone-website.vercel.app/",
+      tags: ["Next.js", "TailwindCSS", "TypeScript"],
+    },
+
   ];
 
   const handleOpenModal = (project: Project) => setSelectedProject(project);
